@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+    height: 100%;
+    font-style: normal;
+}
+.rivi{
+    background-color: white;
+    height: 47%;
+    text-align: left;
+    background-image: url("./koirakuvat/dog-1417208_1280.png");
+}
+.navigaatiopalkki{
+    border: 1px;
+}
