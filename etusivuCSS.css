@@ -6,9 +6,34 @@ body {
 .rivi{
     background-color: white;
     height: 47%;
-    text-align: left;
     background-image: url("./koirakuvat/dog-1417208_1280.png");
 }
+.rivi h1{
+    padding-top: 80px;
+    text-align: center;
+}
+
 .navigaatiopalkki{
     border: 1px;
+}
+
+.etusivuteksti p{
+    padding: 60px;
+    justify-content: center;
+}
+.etusivuteksti video{
+    padding: 60px;
+}
+
+.etusivuteksti{
+    padding-top: 20px;
+}
+
+.linkit{
+    color:black;
+    margin: 10px;
+}
+.linkit:hover{
+    background-color: rgb(121, 120, 120);
+    color: white
 }

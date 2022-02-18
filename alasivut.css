@@ -1,0 +1,84 @@
+body {
+    background-color: white;
+    height: 100%;
+    font-style: normal;
+}
+.rivi{
+    background-color: white;
+    height: 47%;
+    background-image: url("./koirakuvat/dog-1417208_1280.png");
+}
+.rivi h1{
+    padding-top: 80px;
+    text-align: center;
+}
+
+.sivuteksti{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.tokasivuteksti{
+    background-image: url("./koirakuvat/taustakuva.jpg");
+    justify-content: center;
+}
+.collapsible {
+    background-color: rgb(145, 145, 145);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+.formi{
+    padding: 10px;
+    background-color: rgb(172, 171, 171);
+}
+.linkit{
+    color:black;
+    margin: 5px;
+}
+.linkit:hover{
+    background-color: rgb(121, 120, 120);
+    color: white
+}
+.alasivut{
+    justify-content: right;
+}
+.valittu{
+    background-color: #e0e0e0;
+}
+.mapouter{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.responsive-iframe,
+.gmap_canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
