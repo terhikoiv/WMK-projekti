@@ -25,7 +25,7 @@
         <!-- 1. rivi, jossa yläbanneri-->
         <div class="row rivi ">
             <div class="col-sm-12 " >
-                <h1 >Australian labradoodle yhdistys</h1>
+               
             </div>
         </div>
 
@@ -58,23 +58,22 @@
 
         <!-- 3. rivi-->
         <div class="row sivuteksti">
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <h6>Yhdistyksen yhteystiedot</h6>
-                <p>
-                    Puh nro. 050505050<br>
-                    Labradood.yhdistys@gmail.com<br>
-                    Osoite: Microkatu 23, Kuopio
-                </p>
-                <div class="mapouter">
-                  <div class="gmap_canvas">
+                <p>Puh nro. 050505050</p>
+                <p>Labradood.yhdistys@gmail.com</p>
+                <p>Osoite: Microkatu 23, Kuopio</p>
+                
+                <div class="mapouter ">
+                  <div class="gmap_canvas embed-responsive embed-responsive-4by3">
                     <iframe class="responsive-iframe" width="341" height="346" id="gmap_canvas" src="https://maps.google.com/maps?q=Microkatu,%20Kuopio&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:346px;width:341px;}</style>
+                    <a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;overflow: hidden;}</style>
                     <a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:346px;width:341px;}</style>
                   </div>
                 </div>
             </div>
             
-            <div class="col-sm-8">
+            <div class="col-md-8">
               <br></br>
                 <h4>Liity jäseneksi</h4>
                 <p>LabradoodRY jäsenenä saat käyttöösi hyvät edut. Jäsenenä pääset tapahtumiin ilmaiseksi, sekä saat 
@@ -118,8 +117,8 @@
                         </div>
                       </div>
                       <br>
-                      <input type="checkbox" id="scales" name="scales">
-                        <label for="scales">Hyväksyn käyttöehdot</label>
+                      <input type="checkbox" id="ehdot" name="ehdot">
+                        <label for="ehdot">Hyväksyn käyttöehdot</label>
                       <br>
                     </form>
                       <div class="row">
@@ -129,6 +128,9 @@
                       </div>
                     <div class="alert alert-success" style="display:none" id="onnistui">
                       <strong>Kiitos liittymisestä!</strong> Saat lisää tietoa sekä laskun sähköpostiisi.
+                    </div>
+                    <div class="alert alert-danger" style="display:none" id="puuttuu" >
+                      <strong>Tietoja puuttuu!</strong> Täytäthän kaikki kentät ja hyväksyt käyttöehdot.
                     </div>
                   </div>
                   <br></br>
@@ -151,12 +153,22 @@
     </div>
 
     <script>
-      let submitti = document.getElementById("laheta");
-      console.log(submitti);
       function nappiPainettu(){
-          document.getElementById("onnistui").style.display="block";
-      }
+        let nimi = document.getElementById('nimi').value;
+        let osoite = document.getElementById("osoite").value;
+        let puh = document.getElementById("puh").value;
+        let sp = document.getElementById("sp").value;
+        let ehdot = document.getElementById("ehdot").checked;
+        console.log(ehdot);
 
+        if(nimi.length === 0 || osoite.length ===0 || puh.length ===0 || sp.length ===0 || ehdot == false){
+            document.getElementById("puuttuu").style.display="block";
+        } else{
+           document.getElementById("onnistui").style.display="block";
+           document.getElementById("puuttuu").style.display="none";
+        }
+         
+      }
     
     </script>
 
