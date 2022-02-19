@@ -6,7 +6,16 @@ body {
 .rivi{
     background-color: white;
     height: 47%;
-    
+}
+@media only screen and(max-width: 500px), (max-device-width:500px){
+    .rivi{
+        background-image: url("./koirakuvat/piene.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+       
+    }
 }
 
 @media only screen and (min-width: 500px){
